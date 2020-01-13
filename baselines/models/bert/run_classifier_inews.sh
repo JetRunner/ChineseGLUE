@@ -5,7 +5,7 @@
 # @Last Modified time: 2019-11-08 00:10:40
 
 TASK_NAME="inews"
-MODEL_NAME="chinese_L-12_H-768_A-12"
+MODEL_NAME="multi_cased_L-12_H-768_A-12"
 CURRENT_DIR=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 export CUDA_VISIBLE_DEVICES="0"
 export BERT_PRETRAINED_MODELS_DIR=$CURRENT_DIR/prev_trained_model
