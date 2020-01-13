@@ -36,17 +36,17 @@ if [ ! -d $BERT_PRETRAINED_MODELS_DIR ]; then
 fi
 cd $BERT_PRETRAINED_MODELS_DIR
 if [ ! -d $MODEL_NAME ]; then
-  wget https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip
-  unzip chinese_L-12_H-768_A-12.zip
-  rm chinese_L-12_H-768_A-12.zip
+  wget https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip
+  unzip multi_cased_L-12_H-768_A-12.zip
+  rm multi_cased_L-12_H-768_A-12.zip
 else
   cd $MODEL_NAME
   if [ ! -f "bert_config.json" ] || [ ! -f "vocab.txt" ] || [ ! -f "bert_model.ckpt.index" ] || [ ! -f "bert_model.ckpt.meta" ] || [ ! -f "bert_model.ckpt.data-00000-of-00001" ]; then
     cd ..
     rm -rf $MODEL_NAME
-    wget https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip
-    unzip chinese_L-12_H-768_A-12.zip
-    rm chinese_L-12_H-768_A-12.zip
+    wget https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip
+    unzip multi_cased_L-12_H-768_A-12.zip
+    rm multi_cased_L-12_H-768_A-12.zip
   else
     echo "model exists"
   fi
